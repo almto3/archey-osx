@@ -98,7 +98,8 @@ if [[ $1 == "-c" ]]; then
   RED='\033[00;31m'
   PURPLE='\033[00;35m'
   CYAN='\033[00;36m'
-  BLUE='\033[00;34m'
+  BLUE='\033[00;94m'
+  WHITE='\033[00;37m'
 fi
 
 # Output
@@ -109,15 +110,15 @@ ${GREEN}                  ###
 ${GREEN}                ####                  User: $user
 ${GREEN}                ###                   Hostname: $hostname
 ${GREEN}       ####### ##  #######            Version: $version $versionString
-${YELLOW}     ######################           Kernel: $kernel
+${YELLOW}     ######################
 ${YELLOW}    #####################             Uptime: $uptime
 ${LRED}    ####################              Shell: $shell
 ${RED}    ####################              Terminal: $terminal
-${RED}    #####################             Packages: $packages
-${PURPLE}     ######################           CPU: $cpu
-${PURPLE}      ####################            Memory: $ram
-${BLUE}        ################              Disk Used: $disk
-${BLUE}         ####     #####               Internal IP: $ipAddress
+${RED}    #####################
+${PURPLE}     ######################           Disk Used: $disk
+${CYAN}      ####################            Internal IP: $ipAddress
+${CYAN}        ################
+${BLUE}         ####     #####               ${WHITE}a smile speaks every ${GREEN}language
 
 "
 tput sgr0
