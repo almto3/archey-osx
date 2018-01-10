@@ -7,7 +7,8 @@ user=$(whoami)
 hostname=$(hostname | sed 's/.local//g')
 
 ## Version of OS X
-version="OS X $(sw_vers -productVersion)"
+os="OSX"
+version="$(sw_vers -productVersion)"
 
 ## Version name
 versionNumber=$(sw_vers -productVersion) # Finds version number
@@ -24,6 +25,9 @@ if [ -z "$ipAddress" ]; then
 fi
 
 case $versionShort in
+  10.13)
+      versionString="High Sierra"
+      ;;
     10.12)
         versionString="Sierra"
         ;;
@@ -109,7 +113,7 @@ echo -e "
 ${GREEN}                  ###
 ${GREEN}                ####                  User: $user
 ${GREEN}                ###                   Hostname: $hostname
-${GREEN}       ####### ##  #######            Version: $version $versionString
+${GREEN}       ####### ##  #######            Version: $os $versionString $version 
 ${YELLOW}     ######################
 ${YELLOW}    #####################             Uptime: $uptime
 ${LRED}    ####################              Shell: $shell
