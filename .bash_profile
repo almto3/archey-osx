@@ -4,7 +4,7 @@
 [[ -s ~/.bashrc ]] && source ~/.bashrc
 
 export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced'
+export LSCOLORS=GxFxCxDxBxegedabagaced
 
 alias ls='ls -GFh'
 alias ll='ls -l'
@@ -37,3 +37,4 @@ prompt
 # The original version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 export PATH
+
