@@ -1,6 +1,8 @@
 # ~/.bash_profile
 # src: https://dobsondev.com/2014/02/21/customizing-your-terminal/
 
+~/Git/archey-osx/login.sh
+
 [[ -s ~/.bashrc ]] && source ~/.bashrc
 
 export CLICOLOR=1
