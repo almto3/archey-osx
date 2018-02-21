@@ -2,8 +2,10 @@
 # src: https://dobsondev.com/2014/02/21/customizing-your-terminal/
 
 [[ -s ~/.bashrc ]] && source ~/.bashrc
+
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced'
+
 alias ls='ls -GFh'
 alias ll='ls -l'
 
