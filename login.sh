@@ -23,12 +23,13 @@ do
     workingDir=$(pwd)
     if [[ $workingDir =~ \/([^\/]*)$ ]]; then
       echo -e '\033[31m \t' ${BASH_REMATCH[1]}
-    else
-      echo "unable to parse string $workingDir"
     fi
 
     IFS=$'\n'; arr=($stat)
-    echo -e '\t' "\033[96m${arr[0]}"
+    A="$(cut -d' ' -f1 <<<"${arr[0]}")"
+    B="$(cut -d' ' -f2 <<<"${arr[0]}")"
+    C="$(cut -d' ' -f3 <<<"${arr[0]}")"
+    echo -e '\t' "\033[96m$A $B \033[95m$C"
     echo -e '\t' "\033[96m${arr[2]}"
     arrayLength=${#arr[*]}
     for (( i=4; i<${arrayLength}-1; i++ )); do
