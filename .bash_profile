@@ -31,7 +31,7 @@ function prompt {
   local RESETCOLOR="\[\e[00m\]"
 
 
-  export PS1="\n$RED\u $PURPLE@ $GREEN\w $RESETCOLOR\033[95m\$(git branch 2> /dev/null | tr \"\n\" \" \")\n $BLUE[\#] → $RESETCOLOR"
+  export PS1="\n$RED\u $PURPLE@ $GREEN\w $RESETCOLOR\033[95m\$(git branch 2> /dev/null | sed -r 's/\* (.+)/ \(\1)/' | tr \"\n\" \" \")\n $BLUE[\#] → $RESETCOLOR"
   export PS2=" | → $RESETCOLOR"
 }
 prompt
