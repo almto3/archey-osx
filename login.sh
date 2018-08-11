@@ -41,5 +41,5 @@ do
   fi
 done
 
-echo -e '\n' '\t' "\033[35m ;; "$noUpdates repos clean ";;" $needsUpdates need commitin ";;\033[37m"
+echo -e '\n' '\t' "\033[35m ;; "$noUpdates repos up-to-date ";;" $needsUpdates repos have changes ";;\033[37m"
 IFS="$OLDIFS"
